@@ -109,6 +109,26 @@
     60%  { opacity: 1; transform: scale(1.05); }
     100% { opacity: 1; transform: scale(1); }
   }
+
+  .arrow-btn .arrow-btn-icon svg {
+    transition: transform 0.2s ease;
+  }
+  .arrow-btn:hover .arrow-btn-icon svg {
+    transform: translateX(2px);
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal-up.in-view {
+    animation: reveal-up-in 0.6s ease-out forwards;
+  }
+  .reveal-up.in-view:nth-child(2) { animation-delay: 0.12s; }
+  .reveal-up.in-view:nth-child(3) { animation-delay: 0.24s; }
+  @keyframes reveal-up-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
 </style>
 </head>
 <body class="bg-white">
@@ -126,7 +146,7 @@
       <a href="#careers" class="hover:text-[#0268ed]">採用情報</a>
       <a href="#news" class="hover:text-[#0268ed]">お知らせ</a>
       <a href="#history" class="hover:text-[#0268ed]">GM HISTORY</a>
-      <a href="#contact" class="bg-[#005bce] flex gap-4 h-[54px] items-center px-6 text-base text-white">お問い合わせ・見積もり依頼</a>
+      <a href="#contact" class="bg-[#005bce] hover:bg-[#05246f] transition-colors flex gap-4 h-[54px] items-center px-6 text-base text-white">お問い合わせ・見積もり依頼</a>
     </nav>
   </div>
 </header>
@@ -290,9 +310,9 @@
     <p class="text-[18px] font-medium text-[#051b59] max-w-[512px] leading-relaxed">
       遊休スペースや空き区画に、カプセルマシンやアミューズメント機器を組み合わせた収益機会をつくります。
     </p>
-    <a href="#news" class="bg-[#05246f] flex gap-4 h-[50px] items-center px-6 rounded-full text-[16px] font-medium text-white whitespace-nowrap">
+    <a href="#news" class="arrow-btn bg-[#05246f] flex gap-4 h-[50px] items-center px-6 rounded-full text-[16px] font-medium text-white whitespace-nowrap">
       お知らせ一覧を見る
-      <span class="bg-white/95 rounded-full size-[30px] flex items-center justify-center shrink-0">
+      <span class="arrow-btn-icon bg-white/95 rounded-full size-[30px] flex items-center justify-center shrink-0">
         <svg viewBox="0 0 24 24" fill="none" class="size-[16px]" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#fc4d0b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -313,21 +333,21 @@
   </h2>
 
   <div class="flex flex-col gap-10 max-w-[1000px] mx-auto">
-    <a href="#" class="bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
+    <a href="#" class="reveal-up bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
       <div class="flex gap-4 items-center">
         <span class="text-sm text-[#374151]">2026.05.28</span>
         <span class="bg-[#fc4d0b] px-4 py-1 rounded-full text-sm text-white">重要</span>
       </div>
       <p class="pt-2 text-lg text-black">【2026年最新】新紙幣・新硬貨対応の設備改修・入れ替えのご相談について</p>
     </a>
-    <a href="#" class="bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
+    <a href="#" class="reveal-up bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
       <div class="flex gap-4 items-center">
         <span class="text-sm text-[#374151]">2026.05.28</span>
         <span class="bg-[#0268ed] px-4 py-1 rounded-full text-sm text-white">店舗情報</span>
       </div>
       <p class="pt-2 text-lg text-black">FUNFUN越谷店 ゴールデンウィーク営業のお知らせ</p>
     </a>
-    <a href="#" class="bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
+    <a href="#" class="reveal-up bg-white border border-[#e5e7eb] flex flex-col px-8 py-6 rounded-[80px] hover:shadow-md transition-shadow">
       <div class="flex gap-4 items-center">
         <span class="text-sm text-[#374151]">2026.05.28</span>
         <span class="bg-[#fff38e] px-4 py-1 rounded-full text-sm text-[#051b59]">お知らせ</span>
@@ -337,9 +357,9 @@
   </div>
 
   <div class="flex justify-center mt-16">
-    <a href="#" class="bg-[#fc4d0b] flex gap-4 h-[50px] items-center px-6 rounded-full text-[16px] font-medium text-white whitespace-nowrap">
+    <a href="#" class="arrow-btn bg-[#fc4d0b] flex gap-4 h-[50px] items-center px-6 rounded-full text-[16px] font-medium text-white whitespace-nowrap">
       お知らせ一覧を見る
-      <span class="bg-white/95 rounded-full size-[30px] flex items-center justify-center shrink-0">
+      <span class="arrow-btn-icon bg-white/95 rounded-full size-[30px] flex items-center justify-center shrink-0">
         <svg viewBox="0 0 24 24" fill="none" class="size-[16px]" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#0268ed" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -492,6 +512,21 @@
     });
   }, { threshold: 0.2 });
   targets.forEach(function (el) { io.observe(el); });
+
+  var upTargets = document.querySelectorAll('.reveal-up');
+  if (!('IntersectionObserver' in window)) {
+    upTargets.forEach(function (el) { el.classList.add('in-view'); });
+  } else {
+    var ioUp = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          ioUp.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    upTargets.forEach(function (el) { ioUp.observe(el); });
+  }
 })();
 </script>
 </body>
